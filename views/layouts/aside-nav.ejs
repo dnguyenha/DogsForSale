@@ -1,0 +1,29 @@
+            <nav id="nav_vertical_menu">
+                <ul>
+                    <li><a
+                        <% if (typeof(pageUrl) != 'undefined' && pageUrl == 'border-collie')
+                            {
+                                %> class="current" <%
+                            }
+                        %> href="/border-collie">Border Colie</a></li>
+                    <li><a 
+                        <% if (typeof(pageUrl) != 'undefined' && pageUrl == 'golden-retriever')
+                            {
+                                %> class="current" <%
+                            }
+                        %> href="/golden-retriever">Golden Retriever</a></li>
+                    <%
+                    for (var dogPage of dogPages)
+                    {
+                        %>
+                        <li><a 
+                            <% if (typeof(pageUrl) != 'undefined' && pageUrl == dogPage.dogName)
+                            {
+                                %> class="current" <%
+                            }
+                            %> href="/view-dog/<%=dogPage._id%>"><%=dogPage.dogName%></a></li>
+                        <%
+                    }
+                    %>
+                </ul>
+            </nav>

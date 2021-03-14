@@ -1,0 +1,39 @@
+        <nav id="nav_main_menu">
+            <ul>
+                <li><a <%
+                        if (typeof(pageUrl) != 'undefined')
+                        {
+                            if (pageUrl == 'index') { %> class="current" <% }
+                        }
+                    %> href="/">Gallery</a></li>
+                <li><a <%
+                        if (typeof(pageUrl) != 'undefined')
+                        {
+                            if (pageUrl == 'about') { %> class="current" <% }
+                        }
+                    %> href="/about">About us</a></li>
+                <li><a <%
+                        if (typeof(pageUrl) != 'undefined')
+                        {
+                            if (pageUrl == 'contact') { %> class="current" <% }
+                        }
+                    %> href="/contact">Contact</a></li>
+                <li>
+                    <%
+                        if (typeof(isLoggedIn) != 'undefined' && isLoggedIn == 'true')
+                        {
+                            %> <a href="/manage-pages">Admin</a> <%
+                        }
+                        else
+                        {
+                            %> <a <%
+                                    if (typeof(pageUrl) != 'undefined')
+                                    {
+                                        if (pageUrl == 'login') { %> class="current" <% }
+                                    }
+                                %> href="/login">Log in</a>
+                            <%
+                        } %>
+                </li>
+            </ul>
+        </nav>

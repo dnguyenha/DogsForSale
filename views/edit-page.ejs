@@ -1,0 +1,48 @@
+<%- include('layouts/header') -%>
+    <main>
+        <%- include('layouts/admin-nav') -%>
+
+        <h2>Edit Page's Content</h2>
+        
+        <form method="POST" action="" enctype="multipart/form-data">
+            <div id="txtErrors">
+            <%
+                if (typeof(errors) != 'undefined')
+                {
+                    for (var error of errors)
+                    {
+                    %>
+                        <%= error.msg %><br>
+                    <%
+                    }
+                }
+            %>
+            </div>
+
+            <fieldset>
+                <div class="fieldWrapper">
+                    <label for="_pageTitle">Page Title</label>
+                    <input name="pageTitle" id="_pageTitle" type="text" value="<%= dogPage.dogName %>">
+                </div>
+
+                <div class="fieldWrapper">
+                    <label for="_dogImg">Dog Image</label>
+                    <input class="btnBrowse" type="file" name="dogImg" id="_dogImg" value="Browse..." accept="image/*">
+                </div>
+
+                <div class="fieldWrapper">
+                    <textarea style="width: 600px;" name="pageContent" id="_pageContent">
+                        <%= dogPage.pageContent %>
+                    </textarea>
+                </div>
+            </fieldset>
+
+            <div class="fieldWrapper">
+                <input class="button" type="submit" value="Save">
+                <input class="button" type="reset" value="Cancel">
+            </div>
+
+        </form>
+
+    </main>
+<%- include('layouts/footer') -%>

@@ -1,0 +1,41 @@
+<%- include('layouts/header') -%>
+    <main>
+        <%- include('layouts/main-nav') -%>
+
+        <section>
+            <h2>Login</h2>
+            <form method="POST" action="">
+                <div id=txtErrors>
+                <%
+                    if (typeof(errors) != 'undefined')
+                    {
+                        for (var error of errors)
+                        {
+                        %>
+                            <%= error.msg %><br>
+                        <%
+                        }
+                    }
+                    else if (typeof error !== 'undefined') { %> <%= error %> <% }
+                %>
+                </div>
+
+                <fieldset>
+                    <div class="fieldWrapper">
+                        <label for="uname">Username</label>
+                        <input type="text" name="uname" id="_uname">
+                    </div>
+                    <div class="fieldWrapper">
+                        <label for="pass">Password</label>
+                        <input type="password" name="pass" id="_pass">
+                    </div>
+                </fieldset>
+
+                <div class="fieldWrapper">
+                    <input type="submit" value="Login" class="button">
+                </div>
+
+            </form>
+        </section>
+    </main>
+<%- include('layouts/footer') -%>

@@ -1,0 +1,23 @@
+        <nav id="nav_main_menu">
+            <ul>
+                <li><a
+                    <% if (typeof(pageUrl) != 'undefined' && pageUrl == 'manage-pages')
+                        {
+                            %> class="current" <%
+                        }
+                    %> href="/manage-pages">Manage Pages</a></li>
+                <li><a
+                    <% if (typeof(pageUrl) != 'undefined' && pageUrl == 'edit-header')
+                        {
+                            %> class="current" <%
+                        }
+                    %> href="/edit-header">Edit Header</a></li>
+                <li><a
+                    <% if (typeof(pageUrl) != 'undefined' && pageUrl == 'add-page')
+                        {
+                            %> class="current" <%
+                        }
+                    %> href="/add-page">Add Page</a></li>
+                <li><a href="/logout">Log out</a></li>
+            </ul>
+        </nav>

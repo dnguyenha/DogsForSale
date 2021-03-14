@@ -1,0 +1,22 @@
+<%- include('layouts/header') -%>
+    <main>
+        <%- include('layouts/main-nav') -%>
+
+        <aside>
+            <%- include('layouts/aside-nav') -%>
+        </aside>
+
+        <section>
+        <%
+            if (typeof(dogPage) != 'undefined')
+            {
+            %>
+                <h2><%= dogPage.dogName %></h2>
+                <img src="/images/<%=dogPage.dogImgName%>" alt="<%=dogPage.dogName%>" title="<%=dogPage.dogName%>"><br>
+                <%- dogPage.pageContent -%>
+            <%
+            }
+        %>
+        </section>
+    </main>
+<%- include('layouts/footer') -%>

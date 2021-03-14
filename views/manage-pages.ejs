@@ -1,0 +1,55 @@
+<%- include('layouts/header') -%>
+    <main>
+        <%- include('layouts/admin-nav') -%>
+
+        <h2>Welcome to admin's Dashboard</h2>
+        
+        <form method="POST" action="">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Page</th>
+                        <th>Manage</th>
+                        <th>Manage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="/border-collie">Border Collie</a></td>
+                        <td style="color: grey">Edit</td>
+                        <td style="color: grey">Delete</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/golden-retriever">Golden Retriever</a></td>
+                        <td style="color: grey">Edit</td>
+                        <td style="color: grey">Delete</td>
+                    </tr>
+                    <!--
+                    <tr>
+                        <td><a href="/bull-terrier">Bull Terrier</a></td>
+                        <td><a href="#">Edit</a></td>
+                        <td><a href="#">Delete</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="/shiba-inu">Shiba Inu</a></td>
+                        <td><a href="#">Edit</a></td>
+                        <td><a href="#">Delete</a></td>
+                    </tr>
+                    -->
+                    <% for (var dogPage of dogPages)
+                    {
+                        %>
+                            <tr>
+                                <td><a href="/view-dog/<%=dogPage._id%>"><%= dogPage.dogName %></a></td>
+                                <td><a href="/edit-page/<%= dogPage._id %>">Edit</a></td>
+                                <td><a href="/delete-page/<%= dogPage._id %>">Delete</a></td>
+                            </tr>
+                        <%
+                    } 
+                    %>
+                </tbody>
+            </table>
+        </form>
+
+    </main>
+<%- include('layouts/footer') -%>

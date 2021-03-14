@@ -1,0 +1,190 @@
+/* the styles for the elements */
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+	margin: 0 auto 0;
+	width: 800px;
+	border: 3px solid darkgreen;
+	box-shadow: 0px 9px 18px 9px black;
+	background-color: #f2f6ff;
+}
+html {
+	background-color: white;
+}
+a:focus, a:hover {
+	font-style: italic;
+}
+
+/* the styles for the header */
+header h2 {
+	font-size: 220%;
+	color: green;
+}
+header img {
+    width: 270px;
+    height: 80px;
+	float: left;
+	padding: 0 30px; /* top-bot 0, right-left 30px */
+}
+.shadow {
+	text-shadow: 2px 2px 2px darkgreen;
+}
+header {
+	border-bottom: 3px solid darkgreen;
+	padding: 1.5em 0 3em; /* top 1.5, right-left 0, bot 3em */
+	background-image: -webkit-linear-gradient(30deg, #bfd9bf 0%, #bfd9bf 30%, white 50%, #bfd9bf 80%, #bfd9bf 100%);
+}
+
+/* navigation main menu */
+#nav_main_menu ul {
+    list-style: none;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+#nav_main_menu ul li {
+    float: left;
+}
+#nav_main_menu ul li a {
+    text-align: center;
+    display: block;
+    width: 200px;
+    font-size: 120%;
+    padding: .5em 0;
+    text-decoration: none;
+    background-color: darkgreen;
+    color: white;
+}
+#nav_main_menu ul li a.current {
+    color: orange;
+}
+#nav_main_menu ul li a:hover {
+	color: silver;
+}
+#nav_main_menu > ul:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* section */
+section {
+    clear: left;
+    text-align: center;
+    padding: 0 30px 0;
+}
+section h2 {
+	color: darkred;
+	font-size: 180%;
+	padding: 1em 0 1em;
+}
+section h3 {
+	font-size: 120%;
+    padding-bottom: .25em;
+    color: darkred;
+}
+section p {
+    padding-bottom: 1em;
+    line-height: 1.6;
+}
+
+main h2 {
+	color: darkred;
+	font-size: 180%;
+    padding: 1em 0 1em;
+    text-align: center;
+}
+
+/* the styles for the form (in main) */
+form {
+    font-size: 100%;
+    width: 600px;
+    margin: 0 auto 30px;
+    padding: 30px 30px;
+	border: 1px solid darkred;
+	box-shadow: 0 0 10px black;
+}
+form #txtErrors {
+    color: red;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+.message {
+    text-align: center;
+    color: darkolivegreen;
+    font-style: italic;
+    font-size: 120%;
+    padding-bottom: 1.5em;
+}
+.fieldWrapper {
+    margin: 10px 0;
+}
+.fieldWrapper label {
+    font-size: 120%;
+    color: darkgreen;
+    width: 20%;
+    margin-left: 1em;
+    display: inline-block;
+    vertical-align: top;
+}
+.fieldWrapper input {
+    width: 70%;
+}
+.fieldWrapper input.button {
+    width: 30%;
+    margin: 10px 45px 0;
+    font-size: 100%;
+    color: #024b30;
+}
+.fieldWrapper input.btnBrowse {
+    width: 70%;
+}
+form fieldset {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 5px 0;
+}
+form legend {
+    font-size: 110%;
+    font-style: italic;
+    font-weight: bold;
+    color: #024b30;
+}
+form table {
+    border: 1px solid darkgreen;
+    border-collapse: collapse;
+    margin: 20px auto;
+    color: black;
+    width: 90%;
+}
+form table td, form table th {
+    border: 2px solid darkgreen;
+    padding: 5px 4px;
+    color: darkolivegreen;
+    text-align: center;
+}
+form table th {
+    font-weight: bold;
+    color: darkred;
+    background-color: #bfd9bf;
+}
+form a {
+    text-decoration: none;
+    color: darkolivegreen;
+}
+
+/* the styles for the footer */
+footer {
+    clear: both;
+}
+footer p {
+	text-align: center;
+	background-color: #008000;
+	color: white;
+    padding: 1em 0; /* top & bot 1em*/
+    font-style: italic;
+}

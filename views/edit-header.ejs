@@ -1,0 +1,48 @@
+<%- include('layouts/header') -%>
+    <main>
+        <%- include('layouts/admin-nav') -%>
+
+        <h2>Edit Page's Header</h2>
+        
+        <form method="POST" action="" enctype="multipart/form-data">
+            <div id="txtErrors">
+            <%
+                if (typeof(errors) != 'undefined')
+                {
+                    for (var error of errors)
+                    {
+                    %>
+                        <%= error.msg %><br>
+                    <%
+                    }
+                }
+                if (typeof(result) != 'undefined' && result == 'success')
+                {
+                %>
+                    <p style="color:darkgreen">Edit Header successfully!</p>
+                <%
+                }
+            %>
+            </div>
+
+            <fieldset>
+                <div class="fieldWrapper">
+                    <label for="_tagline">Tagline</label>
+                    <input name="tagline" id="_tagline" type="text" value="<%= header.tagLine %>">
+                </div>
+
+                <div class="fieldWrapper">
+                    <label for="_logoImg">Logo Image</label>
+                    <input class="btnBrowse" type="file" name="logoImg" id="_logoImg" value="Browse..." accept="image/*">
+                </div>
+            </fieldset>
+
+            <div class="fieldWrapper">
+                <input class="button" type="submit" value="Save">
+                <input class="button" type="reset" value="Cancel">
+            </div>
+
+        </form>
+
+    </main>
+<%- include('layouts/footer') -%>
